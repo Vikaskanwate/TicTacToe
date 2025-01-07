@@ -7,6 +7,9 @@ html,body {
     height: 100%;
     width: 100%;
 }
+body {
+    position: relative;
+}
 main .box{
     height: 10rem;
     width: 10rem;
@@ -17,7 +20,7 @@ main .box{
     align-items: center;
     justify-content: center;
     font-size: 6rem;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .box:hover {
     background-color: beige;
@@ -33,5 +36,21 @@ h1 {
     background-color: lightcoral;
 }
 .col-12 img {
-    display: none;
+    /* display: none; */
+    width: 0;
+}
+
+.col-12>img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media (max-width:600px) {
+    main .box{
+        height: 8rem;
+        width: 5rem;
+        font-size: 4rem;
+    }
 }
